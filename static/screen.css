@@ -1,0 +1,287 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* Variables */
+
+:root {
+  --text-heading-color: #333;
+  --text-body-color: #4D4D4D;
+  --text-muted: #666;
+  --base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --gray-25: #F8F8F8;
+  --gray-50: #F2F2F2;
+  --gray-100: #E6E6E6;
+  --gray-150: #D9D9D9;
+  --gray-200: #CCCCCC;
+  --gray-300: #B3B3B3;
+  --gray-400: #999999;
+  --gray-500: #808080;
+  --gray-600: #666666;
+  --gray-700: #4D4D4D;
+  --gray-800: #333333;
+  --blue-50: #EBF0F9;
+  --blue-100: #D7E1F4;
+  --blue-200: #B4C7E9;
+  --blue-300: #88A6DD;
+  --blue-400: #6188D1;
+  --blue-500: #396AC6;
+  --semantic-input-border: #B3B3B3;
+  --semantic-divider: #D9D9D9;
+  --semantic-focus-ring: #000;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body > div {
+ height: 100%; 
+}
+
+body {
+  line-height: 1.5;
+  font-family: var(--base-font-family);
+  font-size: 15px;
+  color: var(--text-body-color);
+}
+
+a {
+  color: var(--blue-500);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(57, 106, 198, .5);
+}
+
+a:hover {
+  color: rgba(34, 64, 119, 1);
+  border: none;
+}
+
+a:focus {
+  outline: 0;
+  box-shadow: 0 0 0 2px var(--semantic-focus-ring);
+  border: none;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+}
+
+.header {
+  background: #EEE;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+  border-bottom: 1px solid #CCC;
+}
+
+.header h3 {
+  text-align: center;
+  font-size: 18px;
+}
+
+.header > * {
+  flex: 0 0 33%;
+}
+
+.right-accessory {
+  text-align: right;
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  padding: 0 0 4px;
+}
+
+.form-field {
+  margin-bottom: 12px;
+}
+
+input, textarea {
+  font-family: var(--base-font-family);
+  font-size: 15px;
+  border-radius: 3px;
+
+  padding: 8px 6px;
+  min-height: 36px;
+  border-radius: 4px;
+  font-size: 16px;
+  background: #FFF;
+  display: block;
+  border: 1px solid var(--semantic-input-border);
+  background: #FFF;
+
+  width: 100%;
+}
+
+input:focus,
+textarea:focus {
+  outline: 0;
+  border-color: var(--semantic-focus-ring);
+  box-shadow: 0 0 0 1px var(--semantic-focus-ring);
+}
+
+textarea {
+  line-height: 1.15;
+}
+
+.success-toast {
+  background: rgba(0,0,0,0.8);
+  color: #FFF;
+  position: absolute;
+  top: 10px;
+  padding: 8px;
+  border-radius: 4px;
+  width: 33%;
+  left: 33%;
+  right: 0;
+  text-align: center;
+}
+
+button.block {
+  display: block;
+  width: 100%;
+  padding: 12px 8px;
+  font-size: 16px;
+  background: var(--blue-500);
+  border: 1px solid var(--blue-500);
+  color: #FFF;
+  font-family: var(--base-font-family);
+  border: none;
+}
+
+.action {
+  appearance: none;
+  border: none;
+  padding: 8px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 3px;
+  color: var(--blue-500);
+  display: inline-flex;
+  align-items: center;
+}
+
+.action svg {
+  margin-right: 4px;
+  position: relative;
+  top: 0px;
+}
+
+.action.back svg {
+  margin-right: 0;
+}
+
+/* Scroll logic */
+.main {
+  flex-direction: column;
+  display: flex;
+  height: 100%;
+}
+
+.content-view {
+  flex: 1 1 auto;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.content-view.padded {
+  padding: 12px;
+}
+
+.header {
+  flex: 0 0 56px;
+}
+
+/* Empty state */
+.empty {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty {
+  text-align: center;
+  color: #666;
+}
+
+/* Utilities */
+
+.hide-except-from-screenreader {
+  position: absolute !important; /* Outside the DOM flow */
+  height: 1px; width: 1px; /* Nearly collapsed */
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px); /* All other browsers */
+}
+
+.loader-context {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  display: block;
+  margin: 20px auto;
+}
