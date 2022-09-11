@@ -26,3 +26,5 @@ Create an .env file with the following content:
     VITE_TRELLO_LIST_ID=[YOURLISTID]
 
 Consider this board to be your “database”.
+
+* Now run the project using `npm run dev`
